@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Homework Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Homework Tracker</h1>
+    
+    <section class="card">
+      <h2>Add Subject</h2>
+      <form id="subject-form">
+        <input type="text" id="subject-name" placeholder="e.g. Calculus, Physics..." required>
+        <button type="submit">Add</button>
+      </form>
+      <ul id="subject-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Add Homework</h2>
+      <form id="homework-form" enctype="multipart/form-data">
+        <select id="hw-subject" required></select>
+        <textarea id="hw-text" placeholder="Describe the homework..." required></textarea>
+        <input type="file" id="hw-image" accept="image/*">
+        <label>Due Date & Time:</label>
+        <input type="datetime-local" id="hw-due" required>
+        <label>
+          <input type="checkbox" id="hw-reminder"> 🔔 Remind me 1 hour before
+        </label>
+        <button type="submit">Save Homework</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>📝 Homework List</h2>
+      <div id="homework-list"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
